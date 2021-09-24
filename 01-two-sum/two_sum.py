@@ -1,17 +1,20 @@
 def two_sum(arr, target):
-    arr.sort()
-    l = 0
-    r = len(arr) - 1
+    a = []
 
-    while l < r:
-        sum = arr[l] + arr[r]
-        if sum < target:
-            l += 1
-        elif sum > target:
-            r -= 1
-        else:
-            return [arr[l], arr[r]]
-    return []
+    if arr and len(arr) >= 2:
+        arr.sort()
+        l = 0
+        r = len(arr) - 1
+
+        while l < r:
+            sum = arr[l] + arr[r]
+            if sum < target:
+                l += 1
+            elif sum > target:
+                r -= 1
+            else:
+                return [arr[l], arr[r]]
+    return a
 
 arr1 = [-1, 1, 2, 3, 5]
 x1 = 5

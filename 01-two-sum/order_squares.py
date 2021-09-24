@@ -1,7 +1,8 @@
 def order_squares(arr):
+    a = []
+    
     if arr and len(arr) > 0:
         arr.sort()
-        a = []
 
         r = 0
         while r < len(arr) and arr[r] < 0:
@@ -23,7 +24,7 @@ def order_squares(arr):
             a.append(arr[r]**2)
             r += 1
         
-        return a
+    return a
 
 arr1 = [-4, -3, 1, 2, 3]
 a1 = [1, 4, 9, 9, 16]
