@@ -7,19 +7,20 @@ s1 = 5
 maxSum1 = 5
 max1 = 3
 
+arr2 = [-1, -2, -3, -1, -3, -2]
+max2 = -1
+
 # get the sum of a subarray
 def getSumOfSubArray(arr, i, n):
     sum = 0
     for x in range(i, i + n):
-        print(x)
         sum += arr[x]
-        print(sum)
     return sum
 
 # get the maximum value of array
 def getMaxOfArray(arr):
-    max = 0
-    for x in range(len(arr)):
+    max = arr[0]
+    for x in range(1, len(arr)):
         if (max < arr[x]):
             max = arr[x]
     return max
@@ -33,6 +34,8 @@ def getMaxSumOfArray(arr, n):
             maxSum = currentSum
     return maxSum
 
-print(getSumOfSubArray(arr1, i1, n1))
-print(getMaxOfArray(arr1) == max1)
-print(getMaxSumOfArray(arr1, n1) == maxSum1)
+# print(getSumOfSubArray(arr1, i1, n1))
+# print(getMaxOfArray(arr1) == max1)
+# print(getMaxSumOfArray(arr1, n1) == maxSum1)
+
+print(getMaxOfArray(arr2) == max2)
